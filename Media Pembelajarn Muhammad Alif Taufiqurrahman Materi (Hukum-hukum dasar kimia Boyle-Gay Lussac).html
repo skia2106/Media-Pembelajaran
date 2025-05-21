@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Pembelajaran Hukum Boyle & Gay Lussac</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1, h2 {
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  h3 {
+    margin-bottom: 10px;
+    color: #f1c40f;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  /* Biografi */
+  .biography {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 720px;
+    margin: 20px auto;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  .biography h4 {
+    margin: 0;
+    color: #f9e79f;
+  }
+  .biography p {
+    margin: 5px 0;
+  }
+
+  /* Fitur Penjelasan */
+  .features {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 720px;
+    margin: 20px auto;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+  }
+  .features h4 {
+    margin: 0 0 10px;
+    color: #f9e79f;
+  }
+  .features p {
+    margin: 5px 0;
+  }
+
+  /* Container section */
+  .section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px 30px;
+    max-width: 720px;
+    margin: 25px auto;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: transform 0.3s ease;
+  }
+  .section:hover {
+    transform: scale(1.03);
+  }
+
+  /* Form elements */
+  label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #f9e79f;
+    user-select: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #f1c40f 0%, #f39c12 100%);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  input[type="range"]:hover {
+    background: linear-gradient(90deg, #f39c12 0%, #e67e22 100%);
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #f39c12;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #fff8dc;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    transition: background 0.3s ease;
+    margin-top: -6px;
+  }
+  input[type="range"]:active::-webkit-slider-thumb {
+    background: #e67e22;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    background: #f39c12;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #fff8dc;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    transition: background 0.3s ease;
+  }
+  input[type="range"]:active::-moz-range-thumb {
+    background: #e67e22;
+  }
+
+  /* Output text */
+  .output {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-top: 12px;
+    white-space: pre-line;
+    line-height: 1.4;
+    user-select: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    min-height: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.15);
+  }
+
+  /* Description */
+  .law-description {
+    font-style: italic;
+    background: rgba(241, 196, 15, 0.2);
+    border-left: 5px solid #f1c40f;
+    padding: 15px 20px;
+    margin: 0 0 24px;
+    border-radius: 12px;
+    color: #f9e79f;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    margin: 40px 20px 30px;
+    color: rgba(236, 240, 241, 0.7);
+    font-size: 0.95em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      margin: 15px 12px;
+      padding: 20px 20px;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <h1>Media Pembelajaran Interaktif</h1>
+  <h2>Hukum Boyle & Hukum Gay Lussac</h2>
+
+  <div class="biography">
+    <h4>Biografi Pembuat</h4>
+    <p><strong>Nama:</strong> Muhammad Alif</p>
+    <p><strong>NIM:</strong> 220105501020</p>
+    <p><strong>Kelas:</strong> Pendidikan Kimia B</p>
+    <p><strong>Motto:</strong> "Belajar hari ini, Menginspirasi hari esok, Mengubah selamanya"</p>
+  </div>
+
+  <p style="text-align: center; max-width: 720px; margin: 20px auto;">
+    Media pembelajaran ini dirancang untuk membantu siswa memahami dua hukum penting dalam kimia, yaitu Hukum Boyle dan Hukum Gay Lussac. Hukum Boyle menjelaskan hubungan antara tekanan dan volume gas pada suhu konstan, sedangkan Hukum Gay Lussac menjelaskan hubungan antara tekanan dan suhu gas pada volume konstan. Dengan menggunakan media interaktif ini, siswa dapat melakukan simulasi dan melihat bagaimana perubahan satu variabel mempengaruhi yang lainnya.
+  </p>
+
+  <div class="features">
+    <h4>Fitur-Fitur Media Pembelajaran</h4>
+    <p><strong>1. Interaktivitas:</strong> Siswa dapat mengubah nilai volume dan tekanan menggunakan slider, yang memungkinkan mereka untuk melihat secara langsung bagaimana perubahan ini mempengaruhi hasil.</p>
+    <p><strong>2. Output Real-Time:</strong> Hasil perhitungan akan ditampilkan secara langsung, memberikan umpan balik yang cepat dan membantu siswa memahami konsep dengan lebih baik.</p>
+    <p><strong>3. Penjelasan Hukum:</strong> Setiap hukum dilengkapi dengan penjelasan yang jelas dan ringkas, sehingga siswa dapat memahami prinsip dasar di balik hukum tersebut.</p>
+    <p><strong>4. Desain Responsif:</strong> Media ini dirancang agar dapat diakses dengan baik di berbagai perangkat, baik di komputer maupun di perangkat mobile.</p>
+  </div>
+
+  <div class="section" id="boyle-section" tabindex="0" aria-label="Hukum Boyle section">
+    <h3>Hukum Boyle</h3>
+    <p class="law-description" aria-live="polite">
+      Hukum Boyle menyatakan bahwa pada suhu konstan, tekanan gas berbanding terbalik dengan volume gas.<br>
+      <b>P × V = konstan</b>
+    </p>
+    <label for="volumeBoyle">Volume (V) (liter): <span id="volumeBoyleValue">1</span></label>
+    <input type="range" id="volumeBoyle" min="0.1" max="5" step="0.1" value="1" aria-valuemin="0.1" aria-valuemax="5" aria-valuenow="1" aria-label="Pengaturan volume gas untuk hukum Boyle" />
+    <label for="pressureBoyle">Tekanan (P) (atm): <span id="pressureBoyleValue">1</span></label>
+    <input type="range" id="pressureBoyle" min="0.2" max="10" step="0.1" value="1" aria-valuemin="0.2" aria-valuemax="10" aria-valuenow="1" aria-label="Pengaturan tekanan gas untuk hukum Boyle" />
+    <div class="output" id="boyle-output" aria-live="polite"></div>
+  </div>
+
+  <div class="section" id="gaylussac-section" tabindex="0" aria-label="Hukum Gay Lussac section">
+    <h3>Hukum Gay Lussac</h3>
+    <p class="law-description" aria-live="polite">
+      Hukum Gay Lussac menyatakan bahwa pada volume konstan, tekanan gas berbanding lurus dengan suhu absolut.<br>
+      <b>P / T = konstan</b>
+    </p>
+    <label for="temperatureGay">Suhu (T) (K): <span id="temperatureGayValue">273</span></label>
+    <input type="range" id="temperatureGay" min="273" max="373" step="1" value="273" aria-valuemin="273" aria-valuemax="373" aria-valuenow="273" aria-label="Pengaturan suhu gas untuk hukum Gay Lussac" />
+    <label for="pressureGay">Tekanan (P) (atm): <span id="pressureGayValue">1</span></label>
+    <input type="range" id="pressureGay" min="0.5" max="10" step="0.1" value="1" aria-valuemin="0.5" aria-valuemax="10" aria-valuenow="1" aria-label="Pengaturan tekanan gas untuk hukum Gay Lussac" />
+    <div class="output" id="gaylussac-output" aria-live="polite"></div>
+  </div>
+
+  <footer>
+    © Media Pembelajaran Hukum Gas - Belajar Interaktif untuk SMA<br>
+    Pembuat: Muhammad Alif Taufiqurrahman | NIM: 220105501020 | Kelas: Pendidikan Kimia B
+  </footer>
+
+<script>
+  // Boyle Section
+  const volumeBoyle = document.getElementById('volumeBoyle');
+  const pressureBoyle = document.getElementById('pressureBoyle');
+  const volumeBoyleValue = document.getElementById('volumeBoyleValue');
+  const pressureBoyleValue = document.getElementById('pressureBoyleValue');
+  const boyleOutput = document.getElementById('boyle-output');
+
+  // Boyle: P × V = k, constant (let's take initial P0=1 atm and V0=1 L, k=1)
+  let boyleConstant = 1; 
+
+  function updateBoyle() {
+    const V = parseFloat(volumeBoyle.value);
+    const P = parseFloat(pressureBoyle.value);
+    volumeBoyleValue.textContent = V.toFixed(1);
+    pressureBoyleValue.textContent = P.toFixed(1);
+
+    // calculate expected P as per Boyle's law if volume changed from 1 to V
+    const expectedP = boyleConstant / V;
+    const errorPercent = Math.abs((P - expectedP) / expectedP) * 100;
+
+    boyleOutput.textContent = 
+      `Konstanta Boyle (P×V) = ${(P * V).toFixed(2)}\n` +
+      `Tekanan yang diharapkan untuk volume ${V.toFixed(1)} L adalah ${expectedP.toFixed(2)} atm.\n` +
+      `Perbedaan dari hukum Boyle: ${errorPercent.toFixed(1)}%`;
+
+    boyleOutput.style.color = (errorPercent < 10) ? '#2ecc71' : '#e74c3c';
+  }
+
+  volumeBoyle.addEventListener('input', updateBoyle);
+  pressureBoyle.addEventListener('input', updateBoyle);
+  updateBoyle();
+
+  // Gay Lussac Section
+  const temperatureGay = document.getElementById('temperatureGay');
+  const pressureGay = document.getElementById('pressureGay');
+  const temperatureGayValue = document.getElementById('temperatureGayValue');
+  const pressureGayValue = document.getElementById('pressureGayValue');
+  const gaylussacOutput = document.getElementById('gaylussac-output');
+
+  // Gay Lussac law: P1 / T1 = P2 / T2; initial P0=1 atm, T0=273 K, constant = P/T = 1/273
+  const gayLussacConstant = 1.0 / 273;
+
+  function updateGayLussac() {
+    const T = parseFloat(temperatureGay.value);
+    const P = parseFloat(pressureGay.value);
+    temperatureGayValue.textContent = T;
+    pressureGayValue.textContent = P.toFixed(1);
+
+    // Expected pressure for temperature T given P0=1 atm at T0=273K
+    const expectedP = gayLussacConstant * T;
+    const errorPercent = Math.abs((P - expectedP) / expectedP) * 100;
+
+    gaylussacOutput.textContent = 
+      `Konstanta Gay Lussac (P/T) = ${(P / T).toFixed(4)}\n` +
+      `Tekanan yang diharapkan pada suhu ${T} K adalah ${expectedP.toFixed(2)} atm.\n` +
+      `Perbedaan dari hukum Gay Lussac: ${errorPercent.toFixed(1)}%`;
+
+    gaylussacOutput.style.color = (errorPercent < 10) ? '#2ecc71' : '#e74c3c';
+  }
+
+  temperatureGay.addEventListener('input', updateGayLussac);
+  pressureGay.addEventListener('input', updateGayLussac);
+  updateGayLussac();
+
+</script>
+</body>
+</html>
